@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require("webpack");
 
 module.exports = {
   entry: './src/index.js',
@@ -19,4 +20,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.API_KEY": JSON.stringify("78175bc0ce51ddf5ba481690a47391f3")
+    })
+  ]
 };

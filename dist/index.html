@@ -5,23 +5,45 @@
     <title>Weather⛅</title>
   </head>
   <body>
-    <div id='tempCheckbox'>
-      <label class="checkbox-ios">
-         Switch to F <input type="checkbox"><span class="checkbox-ios-switch"></span>
-      </label>
-    </div>
-    <div id='weatherContainer'>
-      <div id='location'><span class="material-icons">place</span></div>
-      <div id='temp'><span class="material-icons">thermostat</span></div>
-      <div id='feelsLike'><span class="material-icons">emoji_emotions</span></div>
-      <div id='pressure'><span class="material-icons">network_check</span></div>
-      <div id='humidity'><span class="material-icons">water_drop</span></div>
-      <div id='wind'><span class="material-icons">air</span></div>
-    </div>
-    <div id='inputLocation'>
-      <input type="text" id='locInput'></input>
-      <button id='locButton'><span class="material-icons">search</span></button>
-    </div>
+    <main>
+      <div id='tempCheckbox'>
+        <label class="checkbox-ios">
+           Fahrenheit
+           <input type="checkbox"><span class="checkbox-ios-switch"></span>
+           Celsius
+        </label>
+      </div>
+      <div id='weatherContainer'>
+        <div>
+          <span class="material-icons">place</span>
+          <span id='location'></span>
+        </div>
+        <div>
+          <span class="material-icons">cloud</span>
+          <span id='weather'></span>
+        </div>
+        <div>
+          <span class="material-icons">thermostat</span>
+          <span id='temp'></span>
+        </div>
+        <div>
+          <span class="material-icons">emoji_emotions</span>
+          <span id='feelsLike'>Feels like: </span>
+        </div>
+        <div>
+          <span class="material-icons">network_check</span>
+          <span id='pressure'>Atmospheric pressure: </span>
+        </div>
+        <div>
+          <span class="material-icons">water_drop</span>
+          <span id='humidity'>Humidity: </span>
+        </div>
+      </div>
+      <div id='inputLocation'>
+        <input type="text" id='locInput'></input>
+        <button id='locButton'><span class="material-icons">search</span></button>
+      </div>
+    </main>
     <script src="./main.js" charset="utf-8"></script>
   </body>
 </html>

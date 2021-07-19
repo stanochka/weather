@@ -580,7 +580,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Cairo&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  width: 100%;\r\n  height: 100vh;\r\n  background: linear-gradient(45deg, #167D7F, #29A0B1);\r\n  font-family: 'Cairo', sans-serif;\r\n}\r\n\r\ndiv {\r\n  padding: 10px;\r\n  margin: 10px auto;\r\n  border: 1px solid black;\r\n  color: white;\r\n}\r\n\r\nbutton {\r\n  cursor: pointer;\r\n}\r\n\r\n/*Checkbox*/\r\n.checkbox-ios {\r\n\tdisplay: inline-block;\r\n\theight: 28px;\r\n\tline-height: 28px;\r\n\tmargin-right: 10px;\r\n\tposition: relative;\r\n\tvertical-align: middle;\r\n\tfont-size: 14px;\r\n\tuser-select: none;\r\n}\r\n.checkbox-ios .checkbox-ios-switch {\r\n\tposition: relative;\r\n\tdisplay: inline-block;\r\n\tbox-sizing: border-box;\r\n\twidth: 56px;\r\n\theight: 28px;\r\n\tborder: 1px solid rgba(0, 0, 0, .1);\r\n\tborder-radius: 25%/50%;\r\n\tvertical-align: top;\r\n\tbackground: #eee;\r\n\ttransition: .2s;\r\n}\r\n.checkbox-ios .checkbox-ios-switch:before {\r\n\tcontent: '';\r\n\tposition: absolute;\r\n\ttop: 1px;\r\n\tleft: 1px;\r\n\tdisplay: inline-block;\r\n\twidth: 24px;\r\n\theight: 24px;\r\n\tborder-radius: 50%;\r\n\tbackground: white;\r\n\tbox-shadow: 0 3px 5px rgba(0, 0, 0, .3);\r\n\ttransition: .2s;\r\n}\r\n.checkbox-ios input[type=checkbox] {\r\n\tdisplay: block;\r\n\twidth: 0;\r\n\theight: 0;\r\n\tposition: absolute;\r\n\tz-index: -1;\r\n\topacity: 0;\r\n}\r\n.checkbox-ios input[type=checkbox]:not(:disabled):active + .checkbox-ios-switch:before {\r\n\tbox-shadow: inset 0 0 2px rgba(0, 0, 0, .3);\r\n}\r\n.checkbox-ios input[type=checkbox]:checked + .checkbox-ios-switch {\r\n\tbackground: #98D7C2;\r\n}\r\n.checkbox-ios input[type=checkbox]:checked + .checkbox-ios-switch:before {\r\n\ttransform:translateX(28px);\r\n}\r\n\r\n.checkbox-ios input[type=\"checkbox\"]:not(:disabled) + .checkbox-ios-switch {\r\n\tcursor: pointer;\r\n\tborder-color: rgba(0, 0, 0, .3);\r\n}\r\n\r\n.checkbox-ios.focused .checkbox-ios-switch:before {\r\n\tbox-shadow: inset 0px 0px 4px #ff5623;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  box-sizing: border-box;\n}\n\nhtml, body {\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  width: 100%;\n  height: 100vh;\n  background: linear-gradient(45deg, #167D7F, #29A0B1);\n  font-family: 'Cairo', sans-serif;\n  overflow: hidden;\n}\n\nmain {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start;\n}\n\ndiv {\n  padding: 10px;\n  margin: 10px auto;\n  color: white;\n}\n\nspan {\n  margin: 0 10px;\n  text-transform: capitalize;\n}\n\n.material-icons {\n  vertical-align: middle;\n}\n\nbutton {\n  display: inline-block;\n  cursor: pointer;\n  vertical-align: top;\n  padding: 5px 0;\n  height: 40px;\n  width: 40px;\n  border: 0;\n  border-radius: 4px;\n  margin-left: 10px;\n  color: #167D7F;\n  background: white;\n}\n\ninput {\n  padding: 5px;\n  height: 40px;\n  border: 0;\n  border-radius: 4px;\n}\n\ninput:active, input:focus {\n  border: none;\n  resize: none;\n  outline: none;\n  color: #167D7F;\n}\n\n#weatherContainer {\n  border: 1px solid white;\n  border-radius: 4px;\n}\n\n/*Checkbox*/\n.checkbox-ios {\n\tdisplay: inline-block;\n\theight: 28px;\n\tline-height: 28px;\n\tmargin-right: 10px;\n\tposition: relative;\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tuser-select: none;\n}\n.checkbox-ios .checkbox-ios-switch {\n\tposition: relative;\n\tdisplay: inline-block;\n\tbox-sizing: border-box;\n\twidth: 56px;\n\theight: 28px;\n\tborder: 1px solid rgba(0, 0, 0, .1);\n\tborder-radius: 25%/50%;\n\tvertical-align: top;\n\tbackground: #eee;\n\ttransition: .2s;\n}\n.checkbox-ios .checkbox-ios-switch:before {\n\tcontent: '';\n\tposition: absolute;\n\ttop: 1px;\n\tleft: 1px;\n\tdisplay: inline-block;\n\twidth: 24px;\n\theight: 24px;\n\tborder-radius: 50%;\n\tbackground: white;\n\tbox-shadow: 0 3px 5px rgba(0, 0, 0, .3);\n\ttransition: .2s;\n}\n.checkbox-ios input[type=checkbox] {\n\tdisplay: block;\n\twidth: 0;\n\theight: 0;\n\tposition: absolute;\n\tz-index: -1;\n\topacity: 0;\n}\n.checkbox-ios input[type=checkbox]:not(:disabled):active + .checkbox-ios-switch:before {\n\tbox-shadow: inset 0 0 2px rgba(0, 0, 0, .3);\n}\n.checkbox-ios input[type=checkbox]:checked + .checkbox-ios-switch {\n\tbackground: #98D7C2;\n}\n.checkbox-ios input[type=checkbox]:checked + .checkbox-ios-switch:before {\n\ttransform:translateX(28px);\n}\n\n.checkbox-ios input[type=\"checkbox\"]:not(:disabled) + .checkbox-ios-switch {\n\tcursor: pointer;\n\tborder-color: rgba(0, 0, 0, .3);\n}\n\n.checkbox-ios.focused .checkbox-ios-switch:before {\n\tbox-shadow: inset 0px 0px 4px #ff5623;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -724,37 +724,30 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const API_KEY = '78175bc0ce51ddf5ba481690a47391f3'
-
 function getLocation() {
   const input = document.getElementById('locInput');
   return input.value;
 }
 
-function render(property) {
-  const toRender = document.getElementById(`${property}`);
-}
-
 async function getWeather(city) {
-  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`, {
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${"78175bc0ce51ddf5ba481690a47391f3"}`, {
   mode: 'cors'
-}).catch((err) => { console.log(err); });
+}).catch((err) => { document.getElementById('inputLocation').insertAdjacentHTML('beforeend', err); });
   const data = await response.json();
+  console.log(data);
   const location = data.name;
   const temp = data.main.temp;
   const pressure = data.main.pressure;
   const humidity = data.main.humidity;
   const feelsLike = data.main.feels_like;
-  const weather = data.weather[0].main;
-  const wind = data.wind;
+  const weather = data.weather[0].description;
 
-  console.log(location);
-  console.log(tempF);
-  console.log(pressure);
-  console.log(feelsLike);
-  console.log(weather);
-  console.log(wind);
-  console.log(humidity);
+  document.getElementById('location').textContent = location;
+  document.getElementById('weather').textContent = weather;
+  document.getElementById('temp').textContent = temp + '°F';
+  document.getElementById('pressure').textContent = 'Atmospheric pressure: ' + pressure + 'hPa';
+  document.getElementById('feelsLike').textContent = 'Feels like: ' + feelsLike + '°F';
+  document.getElementById('humidity').textContent = 'Humidity: ' + humidity + '%';
 }
 
 getWeather('moscow');
@@ -762,10 +755,19 @@ getWeather('moscow');
 const button = document.getElementById('locButton');
 button.addEventListener('click', () => {
   let location = getLocation();
-  console.log(location);
   getWeather(location);
   }
 );
+
+document.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    let location = getLocation();
+    getWeather(location);
+  }
+});
+
+//TODO add function change Fahrenheit to Celsius on switch
+//TODO safe storage of API keys
 
 })();
 

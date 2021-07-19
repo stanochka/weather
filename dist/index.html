@@ -3,10 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Weather⛅</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <span class="material-icons">thermostat</span>
+    <div id='tempCheckbox'>
+      <label class="checkbox-ios">
+         Switch to F <input type="checkbox"><span class="checkbox-ios-switch"></span>
+      </label>
+    </div>
+    <div id='weatherContainer'>
+      <div id='location'><span class="material-icons">place</span></div>
+      <div id='temp'><span class="material-icons">thermostat</span></div>
+      <div id='feelsLike'><span class="material-icons">emoji_emotions</span></div>
+      <div id='pressure'><span class="material-icons">network_check</span></div>
+      <div id='humidity'><span class="material-icons">water_drop</span></div>
+      <div id='wind'><span class="material-icons">air</span></div>
+    </div>
+    <div id='inputLocation'>
+      <input type="text" id='locInput'></input>
+      <button id='locButton'><span class="material-icons">search</span></button>
+    </div>
     <script src="./main.js" charset="utf-8"></script>
   </body>
 </html>

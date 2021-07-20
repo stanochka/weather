@@ -1,6 +1,6 @@
 const path = require('path');
-const webpack = require("webpack");
-const dotenv = require('dotenv');
+//const webpack = require("webpack");
+//const dotenv = require('dotenv');
 
 module.exports = {
   entry: './src/index.js',
@@ -20,10 +20,11 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
-  },
-  plugins: [
-    new webpack.DefinePlugin({
-      "process.env.API_KEY": JSON.stringify(dotenv.config().parsed['API_KEY'])
-    })
-  ]
+  }
+//  },
+//  plugins: [
+//    new webpack.DefinePlugin({
+//      "process.env.API_KEY": JSON.stringify(dotenv.config().parsed['API_KEY'])
+//    })
+//  ]
 };

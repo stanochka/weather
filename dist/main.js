@@ -729,26 +729,41 @@ function getLocation() {
   return input.value;
 }
 
+function checkSwitch() {
+  const tempSwitch = document.getElementById('tempSwitch');
+  return tempSwitch.checked;
+}
+
+function toCelsius(temp) {
+  return (temp - 273.15).toFixed(1);
+}
+
+function toFahrenheit(temp) {
+  return (temp * 9/5 - 459.67).toFixed(1);
+}
+
+function renderWeather(data) {
+  const location = data.name;
+  const temp = checkSwitch() ? toCelsius(data.main.temp) + '°C' : toFahrenheit(data.main.temp) + '°F';
+  const pressure = data.main.pressure;
+  const humidity = data.main.humidity;
+  const feelsLike = checkSwitch() ? toCelsius(data.main.feels_like) + '°C' : toFahrenheit(data.main.feels_like) + '°F';
+  const weather = data.weather[0].description;
+
+  document.getElementById('location').textContent = location;
+  document.getElementById('weather').textContent = weather;
+  document.getElementById('temp').textContent = temp;
+  document.getElementById('pressure').textContent = 'Atmospheric pressure: ' + pressure + 'hPa';
+  document.getElementById('feelsLike').textContent = 'Feels like: ' + feelsLike;
+  document.getElementById('humidity').textContent = 'Humidity: ' + humidity + '%';
+}
+
 async function getWeather(city) {
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${"78175bc0ce51ddf5ba481690a47391f3"}`, {
   mode: 'cors'
 }).catch((err) => { document.getElementById('inputLocation').insertAdjacentHTML('beforeend', err); });
   const data = await response.json();
-  //TODO: separate into different function
-  console.log(data);
-  const location = data.name;
-  const temp = data.main.temp;
-  const pressure = data.main.pressure;
-  const humidity = data.main.humidity;
-  const feelsLike = data.main.feels_like;
-  const weather = data.weather[0].description;
-
-  document.getElementById('location').textContent = location;
-  document.getElementById('weather').textContent = weather;
-  document.getElementById('temp').textContent = temp + '°F';
-  document.getElementById('pressure').textContent = 'Atmospheric pressure: ' + pressure + 'hPa';
-  document.getElementById('feelsLike').textContent = 'Feels like: ' + feelsLike + '°F';
-  document.getElementById('humidity').textContent = 'Humidity: ' + humidity + '%';
+  renderWeather(data);
 }
 
 getWeather('moscow');
@@ -767,8 +782,12 @@ document.addEventListener('keypress', (e) => {
   }
 });
 
-//TODO add function change Fahrenheit to Celsius on switch
-//TODO safe storage of API keys
+document.getElementById('tempSwitch').addEventListener('change', () => {
+  let location = document.getElementById('location').textContent;
+  getWeather(location);
+});
+
+//TODO handle errors with wrong search
 
 })();
 

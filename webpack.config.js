@@ -1,5 +1,8 @@
 const path = require('path');
 const webpack = require("webpack");
+const dotenv = require('dotenv');
+
+const env = dotenv.config().parsed['API_KEY'];
 
 module.exports = {
   entry: './src/index.js',
@@ -22,7 +25,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.API_KEY": JSON.stringify("78175bc0ce51ddf5ba481690a47391f3")
+      "process.env.API_KEY": JSON.stringify(env)
     })
   ]
 };

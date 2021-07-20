@@ -11,6 +11,7 @@ async function getWeather(city) {
   mode: 'cors'
 }).catch((err) => { document.getElementById('inputLocation').insertAdjacentHTML('beforeend', err); });
   const data = await response.json();
+  //TODO: separate into different function
   console.log(data);
   const location = data.name;
   const temp = data.main.temp;
@@ -44,4 +45,3 @@ document.addEventListener('keypress', (e) => {
 });
 
 //TODO add function change Fahrenheit to Celsius on switch
-//TODO safe storage of API keys

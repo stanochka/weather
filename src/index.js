@@ -36,11 +36,15 @@ function renderWeather(data) {
 }
 
 async function getWeather(city) {
-  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`, {
-  mode: 'cors'
-}).catch((err) => { document.getElementById('inputLocation').insertAdjacentHTML('beforeend', err); });
-  const data = await response.json();
-  renderWeather(data);
+  const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`, {mode: 'cors'})
+    .then(resp => (resp.ok) ? resp.json() : Promise.reject('Invalid input'))
+    .catch((err) => {
+        document.getElementById('inputLocation').insertAdjacentHTML('afterEnd', '<p class="errorMessage">' + err + '</p>');
+    })
+  if (data !== undefined) {
+    renderWeather(data);
+    if (document.querySelector('.errorMessage') !== null) document.querySelector('.errorMessage').remove();
+  }
 }
 
 getWeather('moscow');
@@ -63,5 +67,3 @@ document.getElementById('tempSwitch').addEventListener('change', () => {
   let location = document.getElementById('location').textContent;
   getWeather(location);
 });
-
-//TODO handle errors with wrong search

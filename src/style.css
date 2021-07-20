@@ -72,6 +72,13 @@ input:active, input:focus {
   border-radius: 4px;
 }
 
+.errorMessage {
+  border: solid 1px red;
+  color: red;
+  background: white;
+  padding: 0 10px;
+}
+
 /*Checkbox*/
 .checkbox-ios {
 	display: inline-block;
